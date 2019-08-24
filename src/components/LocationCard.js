@@ -1,13 +1,20 @@
 import React from "react";
-import { Card } from "semantic-ui-react"; 
+import styled from 'styled-components'
+
+const Div = styled.div`
+background-color:black
+margin: 20px;
+`
+const P = styled.p`
+color: white;
+`
 
 export default function LocationCard(props) {
   return (
-     <Card>
-    <Card.Content>
-      <Card.Header>{props.name}</Card.Header>
-      <Card.Meta>{props.type} {props.dimension}</Card.Meta>
-      </Card.Content>
-    </Card>
+    <Div>
+      <P>{props.name}</P>
+      <P>{props.type}</P>
+      <P>{props.dimension}</P>
+    </Div>
   )
 }
