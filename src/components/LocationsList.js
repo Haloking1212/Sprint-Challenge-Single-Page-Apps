@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import LocationCard from './LocationCard';
 import axios from 'axios';
 
-
 export default function LocationsList() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   useEffect(() => {
     axios.get(`https://rickandmortyapi.com/api/location/`)
     .then(response => {
@@ -14,7 +14,10 @@ export default function LocationsList() {
   }, []);
   return (
     <section className="location-list grid-view">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      {data.map( res => (
+        <LocationCard key={res.id} name={res.name} type={res.type} dimension={res.dimension}/>
+      
+      ))}
     </section>
   );
 }
