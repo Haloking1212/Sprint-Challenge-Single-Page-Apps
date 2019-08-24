@@ -90,10 +90,10 @@ Create 3 page components to display data from 3 API endpoints:
 - `https://rickandmortyapi.com/api/location/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-locations)
 - `https://rickandmortyapi.com/api/episode/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-episodes)
 - You will need to add a EpisodeList and EpisodeCard component yourself.
-- [ ] Read the [Rick & Morty API](https://rickandmortyapi.com/documentation/) docs.
-- [ ] Create a component to show a grid of data from the API.
-  - [ ] Include `useState`, `useEffect`.
-  - [ ] Use `Axios` (or `fetch`) to make a GET request to the 3 endpoints.
+- [*] Read the [Rick & Morty API](https://rickandmortyapi.com/documentation/) docs.
+- [ *] Create a component to show a grid of data from the API.
+  - [*] Include `useState`, `useEffect`.
+  - [*] Use `Axios` (or `fetch`) to make a GET request to the 3 endpoints.
   - _Example API Endpoint: `https://rickandmortyapi.com/api/character/`_
   - [ ] Display API results using a [card](https://react.semantic-ui.com/views/card/#content-image-card) grid or [list](https://react.semantic-ui.com/elements/list/#content-icon) UI on the page.
   - [ ] Design each 'page' layout based on the available fields. (See docs for [schema](https://rickandmortyapi.com/documentation/#character-schema) details.)
