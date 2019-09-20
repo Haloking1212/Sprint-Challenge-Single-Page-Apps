@@ -34,6 +34,10 @@ export default function TabNav() {
             <Link to="/locations">Location</Link>
             </div>
 
+            <div>
+            <Link to="/search">Search</Link>
+            </div>
+
         </Div>
     )
     
