@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
+
 export default function SearchForm() {
   
   const [searchCharacter, setSearchCharacter] = React.useState("");
@@ -8,12 +9,12 @@ export default function SearchForm() {
     setSearchCharacter(event.target.value);
   };
 
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
   useEffect(() => {
     axios.get(`https://rickandmortyapi.com/api/character/`)
     .then(response => {
     //  setData(response.data.results);
-      // console.log(response.data.results,"character");
+      // console.log(response.data.results,"character search");
       const people = response.data.results;
       console.log(people,"people")
       const result = people.filter(person => {
@@ -22,7 +23,6 @@ export default function SearchForm() {
       );
       
       setSearchResults(result);
-      
       
     });
   }, [searchCharacter]);
@@ -37,47 +37,14 @@ export default function SearchForm() {
      <ul>
      
      {searchResults && searchResults.map(item => (
-          <li>{item.name}</li>
+       <div>
+       <img src={item.image} alt={"picture of character"}/>
+       <h4>{item.name}</h4>
+       <p>{item.species} {item.status} </p>
+     </div>
         ))}
      </ul>
-     <button type="submit">Search</button>
+     {/* <button type="submit">Search</button> */}
     </section>
   );
 }
-
-
-
-// import React, { useState } from "react";
-// // import * as Yup from "yup";
-
-// export default function SearchForm(/*{ onSearch }*/) {
-
-//   const [form, setForm] = useState({ name: ""});
-
-//   const changeHandler = event => {
-//       console.log(event.target.value);
-//       setForm({...form, [event.target.name]: event.target.value});
-//   };
-  
-//   const submitForm = event => {
-//       event.preventDefault();
-//       const newMem = {
-//           ...form,
-//           id: Date.now()
-//       }
-//     }
-
-//   return (
-//     <section className="search-form">
-//       <form onSubmit={() => onSearch(Search)}>
-//         <input
-//           onChange={changeHandler}
-//           // placeholder="name"
-//           // value={Search}
-//           // name="name"
-//         />
-//         <button type="submit">Search</button>
-//       </form>
-//     </section>
-//   );
-// }
