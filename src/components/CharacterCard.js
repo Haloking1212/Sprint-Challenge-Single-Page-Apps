@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components'
 
 const Div = styled.div`
-background-color: #38cedb;
+background-color: grey;
 margin: 5px;
 `
 
@@ -11,7 +11,7 @@ color: purple;
 `
 
 const P = styled.p`
-color: black;
+color: white;
 `
 
 export default function CharacterCard(props) {
