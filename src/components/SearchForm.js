@@ -18,7 +18,7 @@ export default function SearchForm() {
       const people = response.data.results;
       console.log(people,"people")
       const result = people.filter(person => {
-       return  person.name.toLowerCase() === searchCharacter.toLowerCase()
+       return  person.name.toLowerCase().includes(searchCharacter.toLowerCase())
       }
       );
       
