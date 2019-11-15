@@ -10,7 +10,7 @@ const H4 = styled.h4`
 color: purple;
 `
 
-const P = styled.p`
+const Para = styled.p`
 color: white;
 `
 
@@ -19,7 +19,7 @@ export default function CharacterCard(props) {
    <Div>
     <img src={props.image} alt={"picture of character"}/>
     <H4>{props.name}</H4>
-    <P>{props.species} {props.status} </P>
+    <Para>{props.species} {props.status} </Para>
   </Div>
   )
 
