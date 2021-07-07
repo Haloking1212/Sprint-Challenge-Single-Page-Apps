@@ -1,5 +1,20 @@
 import React from "react";
+import styled from 'styled-components'
 
-export default function LocationCard({ name, type, dimension, residents }) {
-  return <span>todo: location</span>;
+const Div = styled.div`
+background-color:black
+margin: 20px;
+`
+const P = styled.p`
+color: white;
+`
+
+export default function LocationCard(props) {
+  return (
+    <Div>
+      <P>{props.name}</P>
+      <P>{props.type}</P>
+      <P>{props.dimension}</P>
+    </Div>
+  )
 }
